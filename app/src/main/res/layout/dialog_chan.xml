@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="@mipmap/ic_nav"
+android:orientation="vertical"
+>
+     <LinearLayout
+     android:layout_width="fill_parent"
+     android:layout_height="@dimen/dp_40"
+     android:orientation="horizontal"
+     android:gravity="center|left"
+     android:layout_marginTop="@dimen/dp_20"
+     >
+          <TextView
+          android:layout_width="@dimen/dp_70"
+          android:layout_height="fill_parent"
+          android:textColor="@color/black"
+          android:textSize="@dimen/sp_14"
+          android:textStyle="normal"
+          android:singleLine="true"
+          android:gravity="center|right"
+          android:text="通道ID:"
+          android:layout_marginLeft="@dimen/dp_20"
+          />
+
+          <EditText
+          android:id="@+id/etchanid"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:textColor="@color/black"
+          android:textSize="@dimen/sp_14"
+          android:textStyle="normal"
+          android:singleLine="true"
+          android:gravity="center|left"
+          android:background="@drawable/selector_setting_et"
+          android:layout_marginLeft="@dimen/dp_20"
+          android:layout_marginRight="@dimen/dp_20"
+          />
+     </LinearLayout>
+
+     <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="@dimen/dp_40"
+         android:orientation="horizontal"
+         android:gravity="center|left"
+         android:layout_marginTop="@dimen/dp_20"
+         >
+          <TextView
+              android:layout_width="@dimen/dp_70"
+              android:layout_height="fill_parent"
+              android:textColor="@color/black"
+              android:textSize="@dimen/sp_14"
+              android:textStyle="normal"
+              android:ellipsize="marquee"
+              android:marqueeRepeatLimit="marquee_forever"
+              android:singleLine="true"
+              android:gravity="center|right"
+              android:text="通道名称:"
+              android:layout_marginLeft="@dimen/dp_20"
+              />
+
+          <EditText
+              android:id="@+id/etchanna"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:textColor="@color/black"
+              android:textSize="@dimen/sp_14"
+              android:textStyle="normal"
+              android:singleLine="true"
+              android:gravity="center|left"
+              android:background="@drawable/selector_setting_et"
+              android:layout_marginLeft="@dimen/dp_20"
+              android:layout_marginRight="@dimen/dp_20"
+              />
+     </LinearLayout>
+
+     <LinearLayout
+     android:layout_width="fill_parent"
+     android:layout_height="@dimen/dp_40"
+     android:orientation="horizontal"
+     android:gravity="center"
+     android:layout_marginTop="@dimen/dp_40"
+     android:layout_marginLeft="@dimen/dp_20"
+     android:layout_marginRight="@dimen/dp_20"
+     >
+          <Button
+          android:id="@+id/btnsu"
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent"
+          android:text="确定"
+          android:textSize="@dimen/sp_14"
+          android:textColor="@color/black"
+          android:textStyle="normal"
+          android:background="@drawable/roundedbutton_chan"
+              android:layout_weight="1"
+          />
+
+          <Button
+          android:id="@+id/btnca"
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent"
+          android:text="取消"
+          android:textSize="@dimen/sp_14"
+          android:textColor="@color/black"
+          android:textStyle="normal"
+          android:background="@drawable/roundedbutton_chan"
+          android:layout_marginLeft="@dimen/dp_20"
+              android:layout_weight="1"
+          />
+
+          <Button
+          android:id="@+id/btnde"
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent"
+          android:text="删除"
+          android:textSize="@dimen/sp_14"
+          android:textColor="@color/black"
+          android:textStyle="normal"
+          android:background="@drawable/roundedbutton_chan"
+          android:layout_marginLeft="@dimen/dp_20"
+              android:layout_weight="1"
+          />
+     </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,2 @@
+com.easygbs
+string app_name

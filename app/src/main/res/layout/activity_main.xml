@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <import type="android.view.View" />
+
+    <variable
+        name="mMainViewModel"
+        type="com.easygbs.easygbd.viewmodel.activity.MainViewModel" />
+</data>
+
+<LinearLayout
+android:id="@+id/ll_root"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:gravity="center|top"
+android:background="@drawable/bg_gradient_d9f4eb"
+>
+    <!--
+    android:background="@mipmap/ic_nav"
+    -->
+
+        <LinearLayout
+        android:id="@+id/lltop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:orientation="horizontal"
+        >
+            <LinearLayout
+            android:id="@+id/lltopfrist"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:onClick="@{mMainViewModel.topfirst}"
+            android:layout_marginLeft="@dimen/dp_20"
+            >
+                <TextView
+                android:id="@+id/tvtopfrist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="基础设置"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="normal"
+                android:textColor="@{mMainViewModel.selectTopItem==0? @color/color_1a1a1a : @color/color_595959}"
+                />
+
+                <View
+                android:id="@+id/vtopfirst"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_3"
+                android:background="@color/color_53c3a3"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+            android:id="@+id/lltopsecond"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:onClick="@{mMainViewModel.topsecond}"
+            >
+                <TextView
+                android:id="@+id/tvtopsecond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="流媒体设置"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="normal"
+                android:textColor="@{mMainViewModel.selectTopItem==1? @color/color_1a1a1a : @color/color_595959}"
+                />
+
+                <View
+                android:id="@+id/vtopsecond"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_3"
+                android:background="@color/color_53c3a3"
+                android:visibility="invisible"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+            android:id="@+id/lltopthird"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:onClick="@{mMainViewModel.topthird}"
+            android:layout_marginRight="@dimen/dp_20"
+            >
+                <TextView
+                android:id="@+id/tvtopthird"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="通道设置"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="normal"
+                android:textColor="@{mMainViewModel.selectTopItem==2? @color/color_1a1a1a : @color/color_595959}"
+                />
+
+                <View
+                android:id="@+id/vtopthird"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_3"
+                android:background="@color/color_53c3a3"
+                android:visibility="invisible"
+                />
+            </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+    android:id="@+id/llcontent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    >
+    </LinearLayout>
+
+    <View
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_2"
+    android:background="@color/color_e0e0e0"
+    />
+
+    <LinearLayout
+    android:id="@+id/llbottom"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_45"
+    android:orientation="horizontal"
+    android:visibility="@{mMainViewModel.isshowbottomObservableField==true?View.VISIBLE:View.GONE}"
+    >
+
+            <LinearLayout
+            android:id="@+id/llbottomfrist"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:onClick="@{mMainViewModel.bf}"
+            >
+                <ImageView
+                android:id="@+id/ivbottomfirst"
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_22"
+                android:background="@drawable/ic_unreg"
+                android:onClick="@{mMainViewModel.bf}"
+                />
+
+                <TextView
+                android:id="@+id/tvbottomfirst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="注册"
+                android:textSize="@dimen/sp_10"
+                android:textStyle="normal"
+                android:textColor="@color/color_808080"
+                android:onClick="@{mMainViewModel.bf}"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+            android:id="@+id/llbottomsecond"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:onClick="@{mMainViewModel.bs}"
+            >
+                <ImageView
+                android:id="@+id/ivbottomsecond"
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_22"
+                android:background="@drawable/ic_notselectrec"
+                android:onClick="@{mMainViewModel.bs}"
+                />
+
+                <TextView
+                android:id="@+id/tvbottomsecond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="本地录像"
+                android:textSize="@dimen/sp_10"
+                android:textStyle="normal"
+                android:textColor="@color/color_808080"
+                android:onClick="@{mMainViewModel.bs}"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+            android:id="@+id/llbottomthird"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:onClick="@{mMainViewModel.bt}"
+            android:layout_marginRight="@dimen/dp_20"
+            >
+                <ImageView
+                android:id="@+id/ivbottomthird"
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_22"
+                android:background="@drawable/ic_notselectabout"
+                android:onClick="@{mMainViewModel.bt}"
+                />
+
+                <TextView
+                android:id="@+id/tvbottomthird"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="关于"
+                android:textSize="@dimen/sp_10"
+                android:textStyle="normal"
+                android:textColor="@color/color_808080"
+                android:onClick="@{mMainViewModel.bt}"
+                />
+            </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+</layout>
